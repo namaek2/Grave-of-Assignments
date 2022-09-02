@@ -1,0 +1,142 @@
+#include <iostream>
+#include <cstdio>
+#include <string>
+
+using namespace std;
+
+void SUM(int a, int b)
+{
+	cout << a + b;
+	return;
+}
+
+
+void SUM(double a, double b)
+{
+	cout << fixed;
+	cout.precision(2);
+	cout << a + b;
+}
+
+
+void SUM(string a, string b)
+{
+	cout << a << b;
+}
+
+void SUB(int a, int b)
+{
+	cout << a - b;
+}
+
+
+void SUB(double a, double b)
+{
+	cout << fixed;
+	cout.precision(2);
+	cout << a - b;
+}
+
+void MULT(int a, int b)
+{
+	cout << a * b;
+}
+
+void MULT(double a, double b)
+{
+	cout << fixed;
+	cout.precision(2);
+	cout << a * b;
+}
+
+void DIV(int a, int b)
+{
+	cout << a / b;
+}
+
+void DIV(double a, double b)
+{
+	cout << fixed;
+	cout.precision(2);
+	cout << a / b;
+}
+
+void MOD(int a, int b)
+{
+	cout << a % b;
+}
+
+int main(void)
+{
+	int n;
+	char c;
+	int a1, a2;
+	double d1, d2;
+	string s1, s2;
+
+
+	cin >> n;
+	if (n == 1)
+	{
+		cin >> a1 >> c >> a2;
+		if (c == '+')
+		{
+			SUM(a1, a2);
+		}
+		else if (c == '-')
+		{
+			SUB(a1, a2);
+		}
+		else if (c == '*')
+		{
+			MULT(a1, a2);
+		}
+		else if (c == '/')
+		{
+			DIV(a1, a2);
+		}
+		else if (c == '%')
+		{
+			MOD(a1, a2);
+		}		
+	}
+		
+	else if (n == 2)
+	{
+		cin >> d1 >> c >> d2;
+		if (c == '+')
+		{
+			SUM(d1, d2);
+		}
+		else if (c == '-')
+		{
+			SUB(d1, d2);
+		}
+		else if (c == '*')
+		{
+			MULT(d1, d2);
+		}
+		else if (c == '/')
+		{
+			DIV(d1, d2);
+		}
+		else if (c == '%')
+		{
+			cout << "incorrect";
+;		}
+	}
+	else if (n == 3)
+	{
+		cin >> s1 >> c >> s2;
+		if (c == '+')
+		{
+			SUM(s1, s2);
+		}
+		else
+		{
+			cout << "incorrect";
+		}
+	}
+
+	return 0;
+}
