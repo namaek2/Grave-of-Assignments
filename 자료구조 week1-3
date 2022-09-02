@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cstdio>
+#include <string>
+
+using namespace std;
+
+void max(int a[], int b, int &c)
+{
+	c = 0;
+	for (int i = 0; i < b; i++)
+	{
+		if (a[i] > c)
+			c = a[i];
+	}
+	return;
+}
+
+int main()
+{
+	int n, i, max_num;
+	int arr[100];
+	cin >> n;
+	for (i = 0; i < n; i++) cin >> arr[i];
+	max(arr, n, max_num);
+	cout << max_num;
+	return 0;
+}
